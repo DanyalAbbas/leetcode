@@ -1,15 +1,11 @@
 haystack = "mississippi"
 needle = "issip"
 
-ind = 0
-if needle in haystack:
-    ind = haystack.index(needle)
-    j = haystack.rstrip(needle)
-    if needle in j:
-        ind = j.index(needle)
-        print(ind)
+def sol(haystack,needle):
+    if needle in haystack:
+        return haystack.index(needle)
     else:
-        print(ind)
-else:
-    print(-1)
+        return -1
+
+print(sol(haystack, needle))
 
