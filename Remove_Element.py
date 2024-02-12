@@ -5,6 +5,4 @@ for pos,i in enumerate(n):
     if i == val:
         nums.remove(i)
 
-# nums[:] = [i for i in nums if i!= val]
-
 print(nums)
