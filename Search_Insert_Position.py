@@ -1,5 +1,5 @@
-nums = [2,7,8,9,10]
-target = 9
+nums = [1]
+target = 1
 
 def foo(nums : list, target : int):
     start = 0
@@ -12,7 +12,7 @@ def foo(nums : list, target : int):
             start = middle + 1
         else:
             end = middle - 1
-    return start 
+    return start
     
 
 print(foo(nums, target)) 
