@@ -19,7 +19,6 @@ def foo(bills : list):
                 change5 -= 3
             else:
                 return False
-
     return True
             
 
