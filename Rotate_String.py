@@ -12,4 +12,3 @@ def foo(s : str, goal : str):
 
 
 print(foo(s,goal))
-        

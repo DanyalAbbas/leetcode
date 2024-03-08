@@ -1,5 +1,4 @@
 heights  = [1,1,4,2,1,3]
-expected = [1,1,1,2,3,4]
 
 def foo(heights : list):
     expected = sorted(heights)
