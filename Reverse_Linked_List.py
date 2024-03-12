@@ -43,7 +43,6 @@ def recursive(head : ListNode):
     head.next = None
     return nhead
 
-recursive(one).print()
 
 
 
