@@ -1,4 +1,4 @@
-s = r"()[]{}"
+s = r"()[]{"
 
 
 def foo(s : str):
@@ -12,9 +12,11 @@ def foo(s : str):
     for i in s:
         if i in BracketsDict.values():
             temp.append(i)
-        elif BracketsDict[i] == temp[-1]:
+        elif len(temp) >= 1 and BracketsDict[i] == temp[-1]:
             temp.pop()
+        else:
+            return False
 
-    return True if len(temp) == 0 else False
+    return not len(temp)
 
 print(foo(s))
