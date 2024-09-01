@@ -1,15 +1,16 @@
-s = "aabaab!bb"
+s = "aab"
+
 
 def foo(s : str):
     longest = 0
     temp = ""
-    for i in range(len(s)):
-        print(temp)
-        if s[i] not in temp:
-            temp += s[i]
+    for i in s:
+        if i not in temp:
+            temp += i
+            longest = max(longest, len(temp))
         else:
-            temp = temp[temp.find(s[i]):i:]
-        longest = max(longest, len(temp))
+            temp += i
+            temp = temp[temp.index(i)+1::]
     return longest
         
 
