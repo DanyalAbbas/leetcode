@@ -12,6 +12,8 @@ def foo(num : int):
             for i in k.copy():
                   if i > num:
                         k.remove(i)
+            print(num)
+            print(k)
             num -= max(k)
             temp += roman.get(max(k))
       return temp
