@@ -11,5 +11,12 @@ for pos, i in enumerate(s[::-1]):
         else:
             if pos+1 == len(s) or s[::-1][pos+1] == " ":
                 break
-    
+
+
+## OR
+
+def foo(s : str):
+    return len(s.split()[-1])
+
 print(count)
+print(foo(s))
