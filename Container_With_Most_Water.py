@@ -4,8 +4,6 @@ def foo(height : list[int]) -> int:
     Maximum_Water = 0
     for pos1, i in enumerate(height):
         for pos2, j in enumerate(height[::-1]):
-            if i*j < Maximum_Water and pos2 !=0:
-                break
             Potential_Max_Water = min(i,j)*len(height[pos1:len(height)-1 -pos2])
             Maximum_Water = max(Maximum_Water,Potential_Max_Water)
             # print(height[pos1:len(height) - pos2])
@@ -13,5 +11,25 @@ def foo(height : list[int]) -> int:
 
     return Maximum_Water
 
+def bar(height : list[int]) -> int:
+    Maximum_Water = 0
+    left = 0
+    right = len(height) - 1
+
+    while left < right:
+        i = height[left]
+        j = height[right]
+
+        Potential_Max_Water = min(i,j) * (right-left)
+        Maximum_Water = max(Maximum_Water,Potential_Max_Water)
+
+        if i < j:
+            left += 1
+        else:
+            right -= 1
+    return Maximum_Water
+
+
 
 print(foo(height))
+print(bar(height))
