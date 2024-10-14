@@ -24,10 +24,11 @@ one2 = ListNode(1,two2)
 
 def foo(l1 : ListNode, l2 : ListNode) -> ListNode:
     val = []
-    while l1 or l2:
+    while l1:
         val.append(l1.val)
-        val.append(l2.val)
         l1 = l1.next
+    while l2:
+        val.append(l2.val)
         l2 = l2.next
     
     head = None
