@@ -46,9 +46,6 @@ def foo(head : ListNode) -> ListNode:
             itr.next = ListNode(l[0], None)
             l.pop(0)
 
-
-
-
     return head
 
 print(foo(one1))
