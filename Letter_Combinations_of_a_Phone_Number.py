@@ -13,6 +13,32 @@ digit_to_letters = {
 }
 
 def foo(digits : str, hashmap : dict) -> list[str]:
+    
+    if not digits:
+        return []
+    
     All_Outputs = []
-    for i in digits:
-        pass
+    l = []
+    i = 0
+
+    def backtrack(i):
+        nonlocal All_Outputs
+        nonlocal l
+        if i == len(digits):
+            All_Outputs.append("".join(l))
+            return
+        
+        for j in digit_to_letters[digits[i]]:
+            l.append(j)
+            backtrack(i+1)
+            l.pop(-1)
+        
+    
+    backtrack(i)
+    return All_Outputs
+    
+            
+
+
+print(foo(digits, digit_to_letters))
+
