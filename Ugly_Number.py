@@ -9,6 +9,8 @@ def foo(n : int) -> bool:
     
     i = 0
     while Number > i:
+        if factor > 5:
+            break
         if UglyNumber == Number:
             return True
         if n % factor == 0 and factor in factors:
