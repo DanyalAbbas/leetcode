@@ -18,5 +18,5 @@ def foo(nums1 : list[int], m : int, nums2 : list[int], n : int) -> list[int]:
 
 
 
-nums1 = foo(nums1, m, nums2, n)
+foo(nums1, m, nums2, n)
 print(nums1)
