@@ -9,8 +9,22 @@ board = [["5","3",".",".","7",".",".",".","."]
 ,[".",".",".",".","8",".",".","7","9"]]
 
 def foo(board : list[list[str]]) -> bool:
-    for i in range(len(board)):
-        board[i] = [j.replace(".", "") for j in board[i]]
+
+    Rows = True
+    Columns = True
+    Grid3 = True
+    board1 = board[:]
+
+    for i in range(len(board1)):
+        board1[i] = [board1[i][:].pop(j) for j in range(len(board1[i])) if board1[i][j] != "."]
+    
+    for row in range(len(board1)):
+        if len(set(board1[row])) != len(board1[row]):
+            Rows = False
+    
+    for column
+
+
     
     return board
 
