@@ -16,7 +16,7 @@ def foo(board : list[list[str]]) -> bool:
     board1 = board[:]
     board2 = board[:]
     board3 = board[:]
-
+    
     board3 = [board[j][i:i+3] for i in range(0,len(board),3) for j in range(9)]
     gridbox = []
     rand = []
