@@ -5,7 +5,7 @@
 int main()
 {
 
-    printf("%d", StringScore("hello"));
+    printf("%d", StringScore("hell"));
 
 }
 
