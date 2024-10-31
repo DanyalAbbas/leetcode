@@ -4,15 +4,15 @@ import time
 
 
 def foo(s : str):
-    temp = ""
-    temp1 = s[1:]
+    a = list(s)
     for i in range(len(s)):
-        collect = temp + temp1
-        if collect == collect[::-1]:
+        a.pop(i)
+        if a == a[::-1]:
             return True
-        temp += s[i]
-        temp1 = s[i+2:]
+        a = list(s)
+    
     return False
+
 
 t1 = time.time()
 print(foo(s))
