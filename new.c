@@ -18,8 +18,7 @@ int main()
         }
     }
 
-    ArrayMaker(nums, 4);
-    ArrayMaker(arr, 2);
+    printf("%d", arr);
 
 }
 int ArrayMaker(int arr[], int size)

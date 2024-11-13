@@ -10,7 +10,7 @@ int main()
     int Final[2] = {0};
 
     int len = sizeof(nums) / sizeof(nums[0]);
-
+ 
     for (int i = 0; i < len; i++)
     {
         for (int j = i+1; j < len; j++)
