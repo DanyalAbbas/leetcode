@@ -8,7 +8,6 @@ def foo(candies : list[int], extraCandies : int) -> list[bool]:
             NewCandies.append(True)
         else:
             NewCandies.append(False)
-    
     return NewCandies
 
 
