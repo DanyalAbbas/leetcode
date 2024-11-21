@@ -1,6 +1,5 @@
 nums = [0,1,2]
 
-
 def foo(nums : list[int]):
     i = 0
     while i < len(nums) - nums.count(0):
