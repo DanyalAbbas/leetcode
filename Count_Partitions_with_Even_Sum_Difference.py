@@ -4,8 +4,6 @@ def foo(nums : list[int]) -> int:
     Length = len(nums)
     NoOfPartitions = 0
     for i in range(Length-1):
-        print(nums[0:i+1])
-        print(nums[i+1:Length])
         if (sum(nums[0:i+1]) - sum(nums[i+1:Length])) % 2 == 0:
             NoOfPartitions += 1
     
