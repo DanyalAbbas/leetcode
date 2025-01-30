@@ -10,7 +10,7 @@ def foo(n : int, k : int) -> int:
             Rotation = False
         elif CurrentChild == 0:
             Rotation = True
-        CurrentChild += 1 if Rotation == True else -1
+        CurrentChild += 1 if Rotation else -1
         i += 1
     return CurrentChild
 
