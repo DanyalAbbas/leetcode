@@ -7,11 +7,11 @@ def foo(n : int) -> str:
         temp = ""
         i = 0
         while i < len(RLE_string):
-            smt = RLE_string[i]
-            if i == (len(RLE_string) -1) or RLE_string[i+1] != smt:
-                temp += str(i+1) + smt
+            char = RLE_string[i]
+            if i == (len(RLE_string) -1) or RLE_string[i+1] != char:
+                temp += str(i+1) + char
                 i = 0
-                RLE_string = RLE_string.lstrip(smt)
+                RLE_string = RLE_string.lstrip(char)
                 continue
             i += 1
         RLE_string = temp
