@@ -6,7 +6,7 @@ def foo(startTime : list[int], endTime : list[int], queryTime : int) -> int:
     Count = 0
     i = 0
     while i < len(startTime):
-        if queryTime > startTime[i] and queryTime < endTime[i]:
+        if queryTime > startTime[i] and queryTime <= endTime[i]:
             Count += 1
         i +=1
     return Count
