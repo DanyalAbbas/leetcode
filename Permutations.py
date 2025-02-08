@@ -1,15 +1,22 @@
 nums = [1,2,3]
 
 def foo(nums : list[int]) -> list[list[int]]:
-    l = []
-    for i in range(len(nums)):
-        hmm = nums[:]
-        j = 0
-        while j < len(hmm):
-            hmm.append(hmm.pop(i))
-            l.append(list(hmm))
-            j += 1
+    if len(nums) == 1:
+        return [nums[:]]
+    
+    res = []
+
+    for _ in range(len(nums)):
+        n = nums.pop(0)
+        perms = foo(nums)
+        
+        print(perms)
+        for p in perms:
+            p.append(n)
             
-    return l
+        res.extend(perms)
+        nums.append(n)
+        
+    return res
 
 print(foo(nums))
