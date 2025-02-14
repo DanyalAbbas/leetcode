@@ -2,7 +2,6 @@ n = 13
 
 def foo(n : int) -> int:
     s = format(n, "b")
-    print(s)
     if s.count("1") > 1:
         count = 0
         start = s.find("1")
