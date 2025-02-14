@@ -2,7 +2,7 @@ path = "/../"
 
 def foo(path : str) -> str:
     SimplifiedPath = ["/"]
-    PathList = path.split("/")[1::]
+    PathList = path.split("/")
     PathList = [i for i in PathList if i != ""]
     for i in PathList:
         if i == "..":
