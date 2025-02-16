@@ -16,9 +16,9 @@ class ListNode:
 # six = ListNode(6, None)
 # five = ListNode(5, None)
 # four = ListNode(4, five)
-# three = ListNode(3, None)
-# two = ListNode(2, three)
-one = ListNode(1,None)
+three = ListNode(3, None)
+two = ListNode(2, three)
+one = ListNode(1,two)
 
 def foo(head : ListNode, n : int) -> ListNode:
     FastTraversal = head
@@ -27,8 +27,6 @@ def foo(head : ListNode, n : int) -> ListNode:
     Fastcount = 1
     Slowcount = 0
     while FastTraversal.next and FastTraversal.next.next:
-        # SlowTraversal = SlowTraversal.next
-        # Slowcount += 1
         FastTraversal = FastTraversal.next.next
         Fastcount += 2
     Fastcount += 1 if FastTraversal.next else 0
@@ -37,14 +35,12 @@ def foo(head : ListNode, n : int) -> ListNode:
         SlowTraversal = SlowTraversal.next
         Slowcount += 1
     
-
     if Fastcount == n:
         head = head.next
         return head
-        
     SlowTraversal.next = SlowTraversal.next.next
     
     return head
 
-foo(one,1).print()
+foo(one,2).print()
 
