@@ -1,6 +1,6 @@
 n = 4
 
-def foo(n : int) -> list[str]:
+def foo(n : int) -> list[str]: # couldnt solve this one >:(
     res = []
     def dfs(openP, closeP, s):
         if openP == closeP and openP + closeP == n * 2:
