@@ -4,6 +4,8 @@ def foo(s : str) -> str:
     l = list(s)
     temp = []
     for i in l:
+        if len(temp) == 2:
+            break
         if l.count(i) == int(i):
             if i not in temp:
                 temp.append(i)
